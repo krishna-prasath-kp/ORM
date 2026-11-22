@@ -1,8 +1,9 @@
 # Ex02 Django ORM Web Application
-## Date: 
+
+## Date: 22-11-2026
 
 ## AIM
-To develop a Django Application to store and retrieve data from a Vehicle Service Database platform using Object Relational Mapping(ORM).
+To develop a Django application to store and retrieve data from an online food delivery database using Object Relational Mapping (ORM).
 
 ## DESIGN STEPS
 
@@ -32,11 +33,37 @@ Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
 
+### models.py
+```python
+from django.db import models
 
+class Food(models.Model):
+    food_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    restaurant = models.CharField(max_length=100)
+    category = models.CharField(max_length=50)
+    price = models.IntegerField()
+    rating = models.FloatField()
+
+    class Meta:
+        db_table = "food_items"
+
+    def __str__(self):
+        return self.name
+```
+
+### admin.py
+```python
+from django.contrib import admin
+from .models import Food
+
+admin.site.register(Food)
+```
 
 ## OUTPUT
 
+![Uploading Screenshot 2026-11-22 195229.png…]()
 
 
 ## RESULT
-Thus the program for creating vehicle service Database using ORM hss been executed successfully.
+Thus the program for creating a food delivery database using ORM has been executed successfully.
