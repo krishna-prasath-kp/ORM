@@ -62,7 +62,8 @@ admin.site.register(Food)
 
 ## OUTPUT
 
-![Uploading Screenshot 2026-11-22 195229.png…]()
+<img width="1915" height="1077" alt="Screenshot 2026-11-22 195229" src="https://github.com/user-attachments/assets/4acc1558-536c-49f9-a3da-7fc935d7bba5" />
+
 
 
 ## RESULT
